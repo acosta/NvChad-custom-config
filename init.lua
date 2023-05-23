@@ -6,6 +6,7 @@
 --   command = "tabdo wincmd =",
 -- })
 
+local api = vim.api
 local cmd = vim.cmd
 
 -- Highlight whitespaces
@@ -14,4 +15,14 @@ cmd([[match WhitespaceEOL /\s\+$/]])
 
 -- Trim whitespace onsave
 cmd([[autocmd FileType c,cpp,java,php,html,javascript,css,python,sh,lua autocmd BufWritePre <buffer> %s/\s\+$//e]])
+
+-- Setup highlight on yank
+local lua_highlight = api.nvim_create_augroup("lua_highlight", { clear = true })
+api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = lua_highlight,
+})
 

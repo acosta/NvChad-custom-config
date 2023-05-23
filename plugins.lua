@@ -51,8 +51,16 @@ local plugins = {
   {
     'farmergreg/vim-lastplace',
     lazy = false,
-  }
+  },
 
+  -- Markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 
   -- To make a plugin not be loaded
   -- {

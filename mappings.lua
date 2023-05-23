@@ -10,6 +10,11 @@ M.general = {
       end,
       "Toggle floating term",
     },
+    -- Copy all
+    ["<C-a>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
+    -- Tabs
+    ["<C-t>"] = { "<cmd> tabnew <CR>", "new tab" },
+    ["<C-c>"] = { "<cmd> tabclose <CR>", "close tab" },
   },
 }
 

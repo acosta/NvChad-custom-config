@@ -20,4 +20,10 @@ M.general = {
 
 -- more keybinds!
 
+local keymap = vim.keymap
+
+-- Moving lines using Ctrl+j (down) or Ctrl+k (up)
+keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
+keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
+
 return M

@@ -47,6 +47,13 @@ local plugins = {
     end,
   },
 
+  -- reopen files at the last edit position
+  {
+    'farmergreg/vim-lastplace',
+    lazy = false,
+  }
+
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

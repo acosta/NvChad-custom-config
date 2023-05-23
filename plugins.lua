@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -49,7 +49,7 @@ local plugins = {
 
   -- reopen files at the last edit position
   {
-    'farmergreg/vim-lastplace',
+    "farmergreg/vim-lastplace",
     lazy = false,
   },
 
@@ -60,6 +60,12 @@ local plugins = {
     config = function()
       vim.fn["mkdp#util#install"]()
     end,
+  },
+
+  -- rust
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
   },
 
   -- To make a plugin not be loaded

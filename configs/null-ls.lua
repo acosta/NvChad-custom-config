@@ -26,6 +26,9 @@ local sources = {
 
   -- markdown
   diagnostics.markdownlint,
+
+  -- rust
+  formatting.rustfmt,
 }
 
 local lsp_formatting = function(bufnr)

@@ -22,6 +22,9 @@ local sources = {
   b.formatting.black,
   b.formatting.isort,
   b.diagnostics.ruff,
+
+  -- markdown
+  b.diagnostics.markdownlint
 }
 
 null_ls.setup {

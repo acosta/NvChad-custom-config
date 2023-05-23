@@ -57,7 +57,10 @@ M.mason = {
 
     -- rust stuff
     "rust_analyzer",
-    "rustfmt"
+    "rustfmt",
+
+    -- markdown stuff
+    "markdownlint"
   },
 }
 

@@ -29,3 +29,7 @@ api.nvim_create_autocmd("TextYankPost", {
   end,
   group = lua_highlight,
 })
+
+-- spell checker
+set.spelllang = "en_us"
+set.spell = true
